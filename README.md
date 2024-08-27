@@ -17,3 +17,9 @@ Cloudflare 优选 IP，并通过 dnspod 自动切换，15 分钟更新一次
 ### 3.自动更新
 
 > 脚本以 `Server` 服务的方式运行，默认每隔 `15` 分钟自动更新也可手动访问 `http://localhost:3000/updateCloudflareIp` 手动更新
+
+### 测速
+
+优选 IP 示例站点： https://cf.vvhan.com
+
+![Cloudflare优选IP](./测速.webp)
