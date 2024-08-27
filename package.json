@@ -1,0 +1,19 @@
+{
+  "name": "CloudflareIP-dnspod-ddns",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.15.3",
+    "moment": "^2.30.1",
+    "node-schedule": "^2.1.1",
+    "tencentcloud-sdk-nodejs-dnspod": "^4.0.907"
+  }
+}
