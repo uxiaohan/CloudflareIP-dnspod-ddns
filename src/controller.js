@@ -1,16 +1,16 @@
 const moment = require("moment");
+const axios = require("axios");
 // 配置
 const { secretId, secretKey, Domain, SubDomain } = require("./config");
 const tencentcloud = require("tencentcloud-sdk-nodejs-dnspod");
 // 更新 Cloudflare 优选IP开始-----------------------------------------------------------------------------------------------------
 const updateCloudflareIp = async () => {
-  const res = await fetch("https://api.vvhan.com/tool/cf_ip");
-  const data = await res.json();
-  if (!data.success) {
+  const res = await axios.get("https://api.vvhan.com/tool/cf_ip");
+  if (!res.data.success) {
     console.log("\x1b[91m%s\x1b[0m", "更新 Cloudflare 优选IP失败");
     return "更新 Cloudflare 优选IP失败";
   }
-  return await updateTencentDns(data.data);
+  return await updateTencentDns(res.data.data);
 };
 // 更新 Cloudflare 优选IP结束-----------------------------------------------------------------------------------------------------
 
